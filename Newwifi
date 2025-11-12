@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вайвай Жихаревых</title>
+  <meta name="description" content="Официальный сайт Вайфай Жихаревых — здесь ты можешь подключиться и кайфовать.">
+
+  <!-- Код Яндекс РСЯ -->
+  <script>window.yaContextCb=window.yaContextCb||[]</script>
+  <script src="https://yandex.ru/ads/system/context.js" async></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: #222;
+      background-color: #fafafa;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header.hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #ffb347, #ffcc33);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    header.hero h1 {
+      font-size: 3em;
+      animation: fadeInDown 1.2s ease forwards;
+    }
+    header.hero p {
+      animation: fadeInUp 1.5s ease forwards;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    li:hover {
+      transform: scale(1.02);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #eee;
+    }
+    .ad-block {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Вайфай Жихаревых</h1>
+    <p>Добро пожаловать к нам и да это совершенно бесплатно.</p>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>О нас</h2>
+      <p>Мы просто сделал наш вайфай доступный для всех, а все ради рекламы на Яндексе</p>
+    </section>
+
+    <section class="promo">
+      <h2>Наши проекты</h2>
+      <ul>
+        <li>Тест</li>
+        <li>🎧 ТЕСТ</li>
+        <li>🎨 ТЕСТ идей</li>
+      </ul>
+    </section>
+
+    <section class="ad-block">
+      <h2>Партнёрская реклама</h2>
+      <!-- Рекламный блок РСЯ -->
+      <div id="yandex_rtb_R-A-XXXXXXX-1"></div>
+      <script>
+        window.yaContextCb.push(()=>{
+          Ya.Context.AdvManager.render({
+            renderTo: 'yandex_rtb_R-A-XXXXXXX-1',
+            blockId: 'R-A-XXXXXXX-1'
+          })
+        })
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Вайвай Жихаревых. Все права слегка защищены.</p>
+  </footer>
+
+  <script>
+    // Анимации появления при скролле
+    const sections = document.querySelectorAll('section');
+    const reveal = () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < trigger) sec.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
+</body>
+</html>
